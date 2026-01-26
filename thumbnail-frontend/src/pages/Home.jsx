@@ -1,0 +1,26 @@
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import Pricing from "../components/Pricing";
+import Faq from "../components/Faq";
+import CTA from "../components/CTA";
+import TestimonialsMarquee from "../components/Testimonial";
+// import About from '../pages/About';
+// import Community from '../pages/Community';
+// import Generate from "../pages/Generate";
+export default function Home() {
+    return (
+        <>
+            <Hero />
+            <Features />
+            <Pricing />
+            {/* <Faq /> */}
+           {/* mongodb+srv://Thumbify:Thumbify123@cluster0.gmiqmy9.mongodb.net/?appName=Cluster0 */}
+            <TestimonialsMarquee/>
+            <CTA/>
+            {/* <About/>
+            <Community/>
+            <Generate/> */}
+            
+        </>
+    )
+}
