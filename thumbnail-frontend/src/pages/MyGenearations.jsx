@@ -7,17 +7,17 @@ export default function MyGenerations() {
 
   const token = localStorage.getItem("token");
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5000/api/generations/my", {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     })
-  //     .then((res) => setData(res.data))
-  //     .catch(console.error)
-  //     .finally(() => setLoading(false));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/generations/my", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => setData(res.data))
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
 
   if (loading)
     return <p className="pt-32 text-center text-white">Loading...</p>;
@@ -44,15 +44,21 @@ export default function MyGenerations() {
                        overflow-hidden hover:scale-[1.02] transition"
           >
             <img
-              src={item.thumbnailUrl}
-              alt="thumbnail"
-              className="w-full h-48 object-cover"
-            />
+  src={item.imageUrl}
+  alt="thumbnail"
+  className="w-full h-48 object-cover"
+/>
+
 
             <div className="p-4">
-              <p className="text-sm text-gray-300 truncate">
-                {item.prompt || "No prompt"}
-              </p>
+             <p className="text-sm text-gray-300 truncate">
+  {item.title}
+</p>
+
+<p className="text-xs text-gray-400 mt-1">
+  {item.style}
+</p>
+
               <p className="text-xs text-gray-500 mt-1">
                 {new Date(item.createdAt).toLocaleString()}
               </p>

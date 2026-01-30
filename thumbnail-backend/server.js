@@ -27,6 +27,7 @@ import authRoutes from "./routes/authRoutes.js";
 import userRoutes from './routes/userRoutes.js';
 import contactRoutes from "./routes/contactRoutes.js"
 import generateRoutes from "./routes/generateRoutes.js"
+import generationRoutes from "./routes/generationRoutes.js"
 
 console.log("🔥 HF_API_KEY =", process.env.HF_API_KEY);
 
@@ -44,6 +45,7 @@ console.log("🔥 Contact route registered");
 app.use("/api/contact", contactRoutes);
 
 app.use("/api", generateRoutes);
+app.use("/api", generationRoutes);
 app.get("/", (req, res) => {
   res.send("API running 🚀");
 });
