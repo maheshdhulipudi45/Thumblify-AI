@@ -157,7 +157,7 @@ export default function Contact() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/contact", form);
+      await axios.post("https://thumblify-ai.onrender.com/api/contact", form);
 
       toast.success("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });

@@ -205,7 +205,7 @@ const Auth = () => {
       if (state === "login") {
         // 🔐 LOGIN
         const res = await axios.post(
-          "http://localhost:5000/api/auth/login",
+          "https://thumblify-ai.onrender.com/api/auth/login",
           {
             email: formData.email,
             password: formData.password,
@@ -219,7 +219,7 @@ const Auth = () => {
         window.location.href = "/generate";
       } else {
         // 📝 REGISTER
-        await axios.post("http://localhost:5000/api/auth/signup", {
+        await axios.post("https://thumblify-ai.onrender.com/api/auth/signup", {
           name: formData.name,
           email: formData.email,
           password: formData.password,

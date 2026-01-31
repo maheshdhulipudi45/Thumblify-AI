@@ -12,7 +12,7 @@ export default function MyGenerations() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/generations/my-generations", {
+      .get("https://thumblify-ai.onrender.com/api/generations/my-generations", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -25,7 +25,7 @@ export default function MyGenerations() {
 const handleDelete = async (id) => {
   if (!window.confirm("Delete this thumbnail?")) return;
 
-  const url = `http://localhost:5000/api/generations/my-generations/${id}`;
+  const url = `https://thumblify-ai.onrender.com/api/generations/my-generations/${id}`;
   console.log("DELETE URL 👉", url);
 
   try {
