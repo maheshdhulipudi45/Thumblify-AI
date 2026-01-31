@@ -69,8 +69,10 @@ export const generateThumbnail = async (req, res) => {
     const dummyImages = [
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1280&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1280&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1280&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1280&auto=format&fit=crop",
+       "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1280&auto=format&fit=crop",
+       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1280&auto=format&fit=crop",
+      
+
     ];
 
     const imageUrl =

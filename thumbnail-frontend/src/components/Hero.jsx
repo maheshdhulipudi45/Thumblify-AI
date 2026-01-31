@@ -13,13 +13,24 @@ export default function Hero() {
         'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
     ];
 
-    const mainImageUrl = 'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop';
+    // const mainImageUrl = 'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop';
+    
+    const mainImageUrl ='https://blog.animagent.ai/content/images/2025/08/blog_feature_20250825_211151.png';
+
+    // const galleryStripImages = [
+    //     'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=100',
+    //     'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=100',
+    //     'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=100',
+    // ];
 
     const galleryStripImages = [
-        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=100',
-        'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=100',
-        'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=100',
-    ];
+
+
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfh87FJ8wt7iwIsasw9pDeb9mj3jSmcAbDFw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMum6sqnJ69Jl9kKECZiSzcRSOUajsU9YpA&s",
+    "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=120&fit=crop&auto=format",
+];
+
 
     const trustedLogosText = [
   'Content Creators',
@@ -112,10 +123,10 @@ const handleStartProject = () => {
 
                                 {/* </a> */}
 
-                                <GhostButton className="max-sm:w-full max-sm:justify-center py-3 px-5">
+                                {/* <GhostButton className="max-sm:w-full max-sm:justify-center py-3 px-5">
                                     <PlayIcon className="size-4" />
                                     View our work
-                                </GhostButton>
+                                </GhostButton> */}
                             </motion.div>
 
                             <motion.div
@@ -219,10 +230,10 @@ const handleStartProject = () => {
     }}
   >
     <div className="relative flex h-3.5 w-3.5 items-center justify-center">
-      <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping duration-300" />
-      <span className="relative inline-flex size-2 rounded-full bg-green-600" />
+      <span className="absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping duration-300" />
+      <span className="relative inline-flex size-2 rounded-full bg-blue-600" />
     </div>
-    500+ AI thumbnails generated
+    100+ AI thumbnails generated
   </motion.div>
 </div>
 </motion.div>

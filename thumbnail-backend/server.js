@@ -8,8 +8,8 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from './routes/userRoutes.js';
 import contactRoutes from "./routes/contactRoutes.js"
-import generateRoutes from "./routes/generateRoutes.js"
-import generationRoutes from "./routes/generationRoutes.js"
+import generationRoutes from "./routes/mygenerationRoutes.js"
+import generateRoutes from"./routes/generateRoutes.js"
 
 console.log("🔥 HF_API_KEY =", process.env.HF_API_KEY);
 
@@ -18,7 +18,19 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+
+
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
@@ -28,7 +40,11 @@ app.use("/api/contact", contactRoutes);
 
 
 app.use("/api/generations", generationRoutes);
+
 app.use("/api/generate", generateRoutes);
+
+
+
 
 
 app.get("/", (req, res) => {

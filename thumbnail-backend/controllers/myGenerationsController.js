@@ -33,25 +33,28 @@
 //   }
 // };
 
-
-
 import Thumbnail from "../models/Thumbnail.js";
 
 export const getMyGenerations = async (req, res) => {
-  try {
-    const thumbnails = await Thumbnail.find({
-      user: req.userId,
-    }).sort({ createdAt: -1 });
+  const thumbnails = await Thumbnail.find({
+    user: req.userId,
+  }).sort({ createdAt: -1 });
 
-    res.json({
-      success: true,
-      data: thumbnails,
-    });
-  } catch (err) {
-    console.error("❌ MyGenerations error:", err);
-    res.status(500).json({
-      success: false,
-      message: "Failed to fetch generations",
-    });
+  res.json({ success: true, data: thumbnails });
+};
+
+export const deleteGeneration = async (req, res) => {
+  console.log("🔥 DELETE HIT:", req.params.id); // 🔥 debug
+
+  const thumbnail = await Thumbnail.findOne({
+    _id: req.params.id,
+    user: req.userId,
+  });
+
+  if (!thumbnail) {
+    return res.status(404).json({ message: "Not found" });
   }
+
+  await thumbnail.deleteOne();
+  res.json({ success: true });
 };
