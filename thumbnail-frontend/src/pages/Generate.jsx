@@ -373,7 +373,7 @@ const bakeTitleOnImage = (imageUrl, title, style = "") => {
 
     const toastId = toast.loading("Generating thumbnail...");
 
-    const res = await fetch("http://localhost:5000/api/generate-thumbnail", {
+    const res = await fetch("http://localhost:5000/api/generate/generate-thumbnail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

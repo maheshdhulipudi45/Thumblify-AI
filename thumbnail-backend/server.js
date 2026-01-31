@@ -1,21 +1,3 @@
-// const express=require('express')
-// const  app=express()
-// const ConnectDB=require('./configs/db')
-
-// require('dotenv').config()
-
-// app.use(express.json())
-// ConnectDB()
-
-
-// app.get('/',(req,res)=>{
-//     res.send("Server runing on online")
-// })
-
-// const port= process.env.PORT|| 5000
-// app.listen(port,()=>{
-//     console.log(`server runing on ${port}`)
-// })
 
 import "dotenv/config"; // 🔥 MUST BE FIRST LINE
 
@@ -44,8 +26,11 @@ app.use("/api/user",userRoutes);
 console.log("🔥 Contact route registered");
 app.use("/api/contact", contactRoutes);
 
-app.use("/api", generateRoutes);
-app.use("/api", generationRoutes);
+
+app.use("/api/generations", generationRoutes);
+app.use("/api/generate", generateRoutes);
+
+
 app.get("/", (req, res) => {
   res.send("API running 🚀");
 });

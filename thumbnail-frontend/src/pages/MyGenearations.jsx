@@ -8,15 +8,16 @@ export default function MyGenerations() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/generations/my", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((res) => setData(res.data))
-      .catch(console.error)
-      .finally(() => setLoading(false));
+ axios
+  .get("http://localhost:5000/api/generations/my-generations", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+  .then((res) => setData(res.data.data)) // 🔥 IMPORTANT
+  .catch(console.error)
+  .finally(() => setLoading(false));
+
   }, []);
 
   if (loading)
