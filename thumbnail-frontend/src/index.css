@@ -77,3 +77,24 @@
     3px 3px 0 #000,
     6px 6px 15px rgba(0,0,0,0.8);
 }
+
+
+@keyframes marquee-center {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+.animate-marquee-center {
+  display: inline-block;
+  min-width: 100%;
+  animation: marquee-center 25s linear infinite;
+}

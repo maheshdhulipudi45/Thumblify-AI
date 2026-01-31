@@ -195,6 +195,16 @@ const bakeTitleOnImage = (imageUrl, title, style = "") => {
     <section className="py-15 mt-6 sm:py-16 md:py-20 2xl:py-32 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
 
+<div className="overflow-hidden rounded-lg border border-indigo-900/90 
+                bg-indigo-500/0 py-2 mb-4">
+  <div className="animate-marquee-center whitespace-nowrap text-sm text-indigo-300 text-center">
+     API limit reached — generating thumbnail using demo image • 
+    Real AI generation will resume shortly.
+  </div>
+</div>
+
+
+
         {/* PAGE TITLE */}
         <div className="text-center md:text-left mb-12 md:mb-16">
           <Title
